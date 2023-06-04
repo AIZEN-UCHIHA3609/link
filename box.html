@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my box</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Times New Roman', Times, serif;
+            padding: 10px;
+            background:rgba(0, 0, 0, 0.767);
+        }
+  
+        /*Header/Blog Title*/
+        .header{
+            padding: 30px;
+            text-align: center;
+            background:navy;
+        }
+        .header h1{
+            font-size: 50px;
+            color: #b5c3f1;
+        }
+        /*Style the top navigation bar*/
+      .topnav{
+          overflow: hidden;
+          background-color:crimson;
+      }
+      /*style the topnav links*/
+      .topnav a{
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+        }
+        /*change color on hover*/
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, 1);
+            display: block;
+            border-radius:5px;
+            transform: scale(1,2);
+            z-index: 2;
+        }
+        /*create two unequal colums that float next too each other*/
+        /*left column*/
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        /*right column*/
+        .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color: rgb(141, 9, 35);
+            padding-left: 20px;
+        }
+        /*fake image*/
+        .fakeimg {
+            background-color: navy;
+            width: 100%;
+            padding: 20px;
+            margin: 1px;
+        }
+        /*Add a card effect for articles*/
+        .card {
+            background-color: rgb(1, 2, 66);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .card h2 {
+            color: #b5c3f1;
+            text-align: center;
+        }
+        /*clear floats after the columns*/
+        .row::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        /*footer*/
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: crimson;
+            margin-top: 20px;
+        }
+        .footer h2 {
+            color: #140596;
+        }
+        /*Responsive layout-when the screen is less than 800px wide, make the two columns
+        stack on top of each other instead of next to each other*/
+        @media  screen and  (max-width: 800px){
+            .leftcolumn,.rightcolumn,{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /*Responsive layout-when the screen is less than 400px wide, make the navigation links
+        stack on top of each other instead of next to each other*/
+        @media screen and(max-width: 400px){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+        }
+        img {
+            width: 100%;
+            padding-top: 20;
+            height: 60px;
+            margin-top: 5px;
+        }
+        .img1 {
+            width: 100%;
+            padding-top: 20;
+            height: 170px;
+            margin-top: 5px;
+        }
+        .par{
+            color: aqua;
+        }
+        .bar{
+            color: #c9d653;
+        }
+        .img2{
+            width: 400px;
+            height: 200px;
+            padding: 0px;
+            margin: 0;
+            background-color: #000000;
+        }
+        video{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <audio src="Bleach+OST+_+Soundscape+to+Ardor+-+tybw+version.m4a" controls autoplay ></audio>
+        <h1>DO YOU KNOW?!!!</h1>
+        <p class="par">FUN FACTS ABOUT OUR WEIRD UNIVERSE</p>
+    <div class="topnav">
+        <a href="home.html" target="_blank">HOME</a>
+        <a href="facts.html" target="_blank">FACTS</a>
+        <a href="#footer" target="_blank">SOURCES</a>
+        <a href="#par" target="_blank">SIGN UP</a>
+        <a href="#footer"  target="_blank">REFERENCES</a>
+        <a href="#footer" target="_blank" >ABOUT</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>WHAT IS THE UNIVERSE?</h2>
+                <h5 class="bar">The universe is all of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy. The Big Bang theory is the prevailing cosmological description of the development of the universe.</h5>
+                <div class="fakeimg" style="height: 200px;"><img class="img1" src="FACtone.jpeg" alt=""></div>
+                <p class="par">FACT ONE</p>
+                <p class="bar">
+                    There are more stars in the universe than grains of sand on all the beaches on Earth
+                    A black hole is created when big stars explode
+                    When venturing into space, astronauts wear spacesuits which have to be warmed, cooled, pressurised and supplied with fresh air.
+                </p>
+            </div>
+            <div class="card">
+                <h2>FACT TWO</h2>
+                <h5 class="par">JUPITER</h5>
+                <div class="fakeimg" style="height: 200px;"><img src="JUPI.jpeg" alt="" class="img1"></div>
+                <p class="par">JUPITER FACTS</p>
+                <p class="bar">Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun</p>
+            </div>
+            <div class="video"><h2 style="color: firebrick;">TUTORIAL</h2><video src="video/BLEACH+Thousand-Year+Blood+War+Part+2+_+The+Separation+-+Official+Trailer+(English+Sub).mp4"  controls width="450" height="250" ></video></div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About me</h2>
+                <div class="fakeimg" style="height: 100px;"><img src="madara.PNG" alt="" class="img"></div>
+                <p class="bar">I am Student . I finished high school education and i am now in the university 
+                    at firt year. I'm interested in coding.
+                </p>
+            </div>
+            <div class="card">
+                <h3>popular post</h3>
+                <div class="fakeimg"><p class="par">VAMPIRES</p><img src="vampires.jpeg" alt=""></div>
+                <div class="fakeimg"><p class="par">WORLD WARS</p><img src="wars.jpeg" alt=""></div>
+                <div class="fakeimg"><p class="par">ANIME</p><img src="anime.jpeg" alt=""></div>
+            </div>
+            <div class="card">
+                <h3 class="par">follow me</h3>
+                <p class="bar">axmedcwaxid36@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>FOR MORE SUBSCRIBE THIS SITE</h2>
+    </div>
+</body>
+</html>
